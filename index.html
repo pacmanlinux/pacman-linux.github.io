@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewpoint" content="width=device-width, inital-scale=1.0"/>
+	<title>PacMan Linux</title>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			font-family: 'JetBrains Mono', monospace;
+			background-color: #000;
+			color: #fdf200;
+		}
+
+		#terminal-welcome {
+			background-color: #000;
+			color: #fdf200;
+			font-size: 1rem;
+			padding: 40px;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+
+		#terminal-output {
+			white-space: pre-wrap;
+			text-align: left;
+			width: 100%;
+			max-width: 900px;
+		}
+
+		nav {
+			background-color: #111;
+			border-bottom: 2px solid #fdf200;
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+			padding: 20px;
+		}
+
+		nav a {
+			color: #fdf200;
+			text-decoration: none;
+			font-weight: bold;
+			transition: color 0.3s;
+		}
+
+		nav a:hover, nav a.active {
+			color: #ff5c8a;
+		}
+
+		.section {
+			padding: 60px 20px;
+			text-align: center;
+			display: none;
+		}
+
+		.section.active {
+			display: block;
+		}
+
+		.features {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.feature-box {
+			background: #111;
+			border: 2px solid #fdf200;
+			border-radius: 10px;
+			padding: 20px;
+			width: 280px;
+		}
+
+		.feature-box h3 {
+			color: #ff5c8a;
+			margin-bottom: 10px;
+		}
+
+		.screenshots img {
+			width: 90%;
+			max-width: 700px;
+			border: 2px solid #fdf200;
+			border-radius: 10px;
+			margin: 20px 0;
+		}
+
+		.button {
+			background-color: #fdf200;
+			color: #000;
+			padding: 12px 24px;
+			margin: 10px;
+			border: none;
+			border-radius: 8px;
+			font-weight: bold;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		.button:hover {
+			background-color: #ff5c8a;
+			color: #fff;
+		}
+
+		footer {
+			background-color: #111;
+			color: #555;
+			text-align: center;
+			padding: 30px;
+			border-top: 2px solid #fdf200;
+		}
+	</style>
+	</head>
+	<body>
+		
+		<div id="terminal-welcome">
+			<pre id="terminal-output"></pre>
+		</div>
+
+		<!-- main content -->
+		<div id="main-content" style="display: none;">
+			<nav>
+				<a href="#" class="tablink active" data-tab="home">Home</a>
+				<a href="#" class="tablink" data-tab="features">Features</a>
+				<a href="#" class="tablink" data-tab="screenshots">Screenshots</a>
+				<a href="#" class="tablink" data-tab="download">Download</a>
+			</nav>
+
+			<section id="home" class="section active">
+				<h1>PacMan Linux</h1>
+				<p>"The 'Live' Offensive Security OS Powered by Arch"</p>
+				<p>"PacMan Linux "eats" vulnerabilities before the ghosts (hackers) can catch you!"</p>
+			</section>
+
+			<section id="features" class="section">
+				<h2>Secure. Speedy. Stable.</h2>
+				<div class="features">
+					<div class="feature-box">
+						<h3>Optimized for Pentesters, Bug Bounty Hunters & Hackers!</h3>
+						<br>
+						<p>Preloaded with Various Cyber-Security tools</p>
+						<br>
+						<p>-> Password Cracking. <-</p>
+						<p>-> Networking.<-</p>
+						<p>-> Forensics.<-</p>
+						<p>-> Ddos <-</p>
+						<p>Plus many other types of preloaded tools!</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="screenshots" class="section screenshots">
+				<h2>Screenshots</h2>
+				<img src="screenshot1.png" alt="PacMan Linux Desktop">
+			</section>
+
+			<section id="download" class="section">
+				<h2>Download PacMan Linux</h2>
+				<h3>Minimum System Requirements:</h3>
+				<p>CPU -> 64-bit Dual-Core</p>
+				<p>RAM -> 2GB (4GB Recommended)</p>
+				<p>Storage (USB) -> 8GB (16GB Recommended for Persistence)</p>
+				<p>Graphics -> Any (No GPU acceleration required, but helpful for tools like hashcat)</p>
+				<p>Boot -> UEFi/BIOS support</p> 
+				<br><br>
+				<h3>Recommended System Requirements:</h3>
+				<p>CPU -> 64-bit Quad-Core (intel i5/Ryzen 5 or better)</p>
+				<p>RAM -> 8GB+ (Required for virtuslization, multiple VMs, Memory intensive tools)</p>
+				<p>Storage (USB) -> 32GB+ (for Persistence, toolkits, and evidence storage)</p>
+				<p>Graphics -> GPU with OpenCL/CUDA support (For Password Cracking with hashcat)</p>
+				<p>Networking -> Wi-Fi card supporting monitor mode (e.g. Atheros AR9271, Intel AX200)</p>
+				<br><br>
+				<h3>Advanced System Requirements (For Heavy Security Workloads):</h3>
+				<p>CPU -> 6+ Cores (Required for running multiple VMs, Docker containers)</p>
+				<p>RAM -> 16GB+ (For memory analysis, malware sandboxing)</p>
+				<p>Storage (USB) -> 64GB+ (Needed for forensic images, large datasets)</p>
+				<p>Graphics (GPU) -> NVIDIA RTX/AMD RX (Helps to Speed up the Process of Cracking Hashes)</p>
+				<p>Networking -> Dual NICs (For Network Pentesting, Man in the Middle Attacks)</p>
+				<br>
+				<a href="#" class="button">⬇️ Download The PacMan Linux ISO</a>
+				<a href="#" class="button">🧑‍💻 PacMan Linux -> GitHub </a>
+			</section>
+
+			<footer>
+				<p>PacMan Linux ©️ 2025</p>
+				<p>A One Man Cyber-Security Project from the U.K.</p>
+			</footer>
+		</div>
+
+		<script>
+			const lines = [
+				"PacMan Linux Bootloader v1.0",
+				"Loading the Linux Kernel...",
+				"Initializing KDE Desktop Environment...",
+				"Mounting /dev/sda1 [OK]",
+				"Launching PacMan Linux...",
+				"Establishing Secure Session...",
+				"Welcome to PacMan Linux!",
+				"Press Any Key to Continue..."
+			];
+
+			const terminalOutput = document.getElementById('terminal-output');
+			const mainContent = document.getElementById('main-content');
+			let index = 0;
+			let charIndex = 0;
+
+			function typeLine() {
+				if (index >= lines.length) {
+					document.addEventListener('keydown', showMainContent);
+					return;
+				}
+
+				if (charIndex < lines[index].length) {
+					terminalOutput.textContent += lines[index][charIndex++];
+					setTimeout(typeLine, 40);
+				} else {
+					terminalOutput.textContent += '\n';
+					index++;
+					charIndex = 0;
+					setTimeout(typeLine, 400);
+				}
+			}
+
+			function showMainContent() {
+				document.removeEventListener('keydown', showMainContent);
+				document.getElementById('terminal-welcome').style.display = 'none';
+				mainContent.style.display = 'block';
+			}
+
+			window.onload = () => {
+				typeLine();
+			};
+
+			const tablinks = document.querySelectorAll('.tablink');
+			tablinks.forEach(link => {
+				link.addEventListener('click', e => {
+					e.preventDefault();
+					document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+					document.querySelectorAll('tablink').forEach(a => a.classList.remove('active'));
+					document.getElementById(link.dataset.tab).classList.add('active');
+					link.classList.add('active');
+				});
+			});
+		</script>
+	</body>
+	</html>
