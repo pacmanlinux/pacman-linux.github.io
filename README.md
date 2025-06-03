@@ -1,1 +1,1 @@
-# pacman-linux.github.io
+# pacmanlinux.github.io
