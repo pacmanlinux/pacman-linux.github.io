@@ -18,3 +18,4 @@ pacmanlinux.github.io/
 
 - index.hmtl	# Main Landing Page
 - README.md
+- url.png # Inital website URL screenshot
