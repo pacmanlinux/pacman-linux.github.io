@@ -6,7 +6,8 @@ Welcome to the **Official Website** for **PacMan Linux** - A Blazing Fast, Secur
 ## Live Website 
 Visit the Site Here:
 [pacmanlinux.github.io](pacmanlinux.github.io)
-**STILL IN PROGRESS**
+
+> ![url](https://github.com/user-attachments/assets/d67eeff4-eca9-4255-949f-3a8fe863fbad)
 
 ---
 
