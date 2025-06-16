@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewpoint" content="width=device-width, inital-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>PacMan Linux</title>
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 	<style>
@@ -10,44 +10,45 @@
 			margin: 0;
 			font-family: 'JetBrains Mono', monospace;
 			background-color: #000;
-			color: #fdf200;
-		}
-		
-		nav {
-			background-color: #111;
-			border-bottom: 2px solid #fdf200;
-			display: flex;
-			justify-content: center;
-			gap: 30px;
-			padding: 20px;
+			color: fdf200;
+			line-height: 1.6;
 		}
 
-		nav a {
-			color: #fdf200;
-			text-decoration: none;
-			font-weight: bold;
-			transition: color 0.3s;
-		}
-
-		nav a:hover, nav a.active {
-			color: #ff5c8a;
-		}
-
-		.section {
-			padding: 60px 20px;
+		header {
+			padding: 100px 20px 60px;
 			text-align: center;
-			display: none;
+			background: #111;
+			border-bottom: 2px solid #fdf200;
 		}
 
-		.section.active {
-			display: block;
+		header h1 {
+			font-size: 3em;
+			margin-bottom: 10px;
+		}
+
+		header p {
+			font-size: 1.2em;
+			color: #bbb;
+		}
+
+		section {
+			padding: 60px 20px;
+			max-width: 1000px;
+			margin: auto;
+		}
+
+		h2 {
+			color: #ff5c8a;
+			border-bottom: 1px solid #fdf200;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
 		}
 
 		.features {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
 			gap: 20px;
+			justify-content: center;
 		}
 
 		.feature-box {
@@ -55,20 +56,44 @@
 			border: 2px solid #fdf200;
 			border-radius: 10px;
 			padding: 20px;
-			width: 280px;
+			width: 300px;
 		}
 
 		.feature-box h3 {
-			color: #ff5c8a;
+			color: #fdf200;
 			margin-bottom: 10px;
 		}
 
 		.screenshots img {
-			width: 90%;
+			width: 100%;
 			max-width: 700px;
+			display: block;
+			margin: 20px auto;
 			border: 2px solid #fdf200;
 			border-radius: 10px;
-			margin: 20px 0;
+		}
+
+		.requirements {
+			.display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.requirements-box {
+			background: #111;
+			border-left: 4px solid #fdf200;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.requirements-box h3 {
+			margin-top: center;
+			color: #ff5c8a;
+		}
+
+		.button-group {
+			text-align: center;
+			margin-top: 40px;
 		}
 
 		.button {
@@ -95,85 +120,83 @@
 			padding: 30px;
 			border-top: 2px solid #fdf200;
 		}
+
+		@media (max-width: 768px) {
+			.features {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.feature-box {
+				width: 90%;
+			}
+		}
 	</style>
-	</head>
-	<body>
+</head>
+<body>
 
-		<!-- main content -->
-		<div id="main-content">
-			<nav>
-				<a href="#" class="tablink active" data-tab="home">Home</a>
-				<a href="#" class="tablink" data-tab="features">Features</a>
-				<a href="#" class="tablink" data-tab="screenshots">Screenshots</a>
-				<a href="#" class="tablink" data-tab="download">Download</a>
-			</nav>
+	<header>
+		<h1>PacMan Linux</h1>
+		<p>Build Your Own CyberSecurity System - Not Just Another Pointless Distro</p>
+		<p>Fast, Minimal, Arch-based. Built For Developers, Hackers, and Power Users</p>
+	</header>
 
-				<section id="home" class="section active">
-				<h1><u>PacMan Linux</u></h1>
-				<p>The Customizable CyberSecurity Distro For Script Writers, Not Scirpt Kiddies!</p>
-				<br>
-				<p>Powered By Arch. Hardended For Offense. Built For Developers.</p>
-			</section>
+	<section>
+		<h2>What is PacMan Linux?</h2>
+		<p>PacMan Linux is a Customizable, Arch-based CyberSecurity OS That Puts **you** in Control. Whether You're a Red Teamer, Blue Teamer, or Developer, PacMan Linux Gives You The **Building Blocks** - Not Bloat - To Create Your Perfect Hacking and Coding Environment,</p>
+	</section>
 
-			<section id="features" class="section">
-				<h2>Secure. Modular. Fast</h2>
-				<div class="features">
-					<div class="feature-box">
-						<h3>CyberSecurity Modules</h3>
-						<p>Install Only The Tools You Need - Pentesting, Reverse Engineering, Forensics, Malware Analysis, And More!</p>
-					</div>
-					<div class="feature-box">
-						<h3>PacMan Script Engine</h3>
-						<p>Every Tool Is Launched via FZF-based Terminal Scripts or GTK Interfaces.<br>Built For Productivity And Control</p>
-					</div>
-					<div class="feature-box">
-						<h3>Clean Dev Experiance</h3>
-						<p>Using The Budgie Desktop, Minimal & Powerful</p>
-					</div>
+	<section>
+		<h2>Features</h2>
+		<div class="features">
+			<div class="feature-box">
+				<h3>Modular CyberSecurity Tools</h3>
+				<p>Install Only What You Need - Red Team, Blue Team, or PurpleOps. Scripts for 100+ Tools.</p></div>
+				<div class="feature-box">
+					<h3>Arch-Based Speed</h3>
+					<p>Minimal Base, Rolling Release, Fast Boot, and Optimized System Performance with Flatpak & AUR Support Out-of-The-Box.</p>
 				</div>
-			</section>
+				<div class="feature-box">
+					<h3>Developer Ready</h3>
+					<p>Pre-Configured With Dev Tools, IDE Support, and GTK-based UI's for Tool Management, and Scripting.</p>
+				</div>
+				<div class="feature-box">
+					<h3>Manual Control</h3>
+					<p>You're Not Forced Into Bloatware or Rigid Environments. You Build The Lab Your Path Requires.</p>
+				</div>
+			</div>
+	</section>
 
-			<section id="screenshots" class="section">
-				<h2>Screenshots</h2>
-				<br>
-				<img src="desktop.png" alt="PacMan Linux Desktop">
-				<br>
-				<img src="stats.png" alt="PacMan Linux Idle Stats">
-			</section>
+	<section class="screenshots">
+		<h2>Screenshots</h2>
+		<img src="desktop.png" alt="PacMan Linux Desktop Screenshot">
+		<p style="text-align:center;">Dark-Themed, Lightweight and Deadly.</p>
+	</section>
 
-			<section id="download" class="section">
-				<h2>Download PacMan Linux</h2>
-				<br>
-				<h3>Minimum System Requirements</h3>
-				<ul style="list-style: none; padding-left: 0;">
-					<li>64-bit Dual-Core CPU</li>
-					<li>2GB RAM (4GB Recommended)</li>
-					<li>16GB Storage (32GB Recommended)</li>
-					<li>Basic Graphics (No GPU Acceleration Required)</li>
-					<li>UEFI/BIOS Boot Support</li>
+	<section>
+		<h2>System Requirements</h2>
+		<div class="requirements">
+
+			<div class="requirements-box">
+				<h3>Minimum Requirements to Install PacMan Linux</h3>
+				<ul>
+					<li>CPU -> 64-bit Dual Core (i5 Recommended)</li>
+					<li>RAM -> 4GB (8-16GB Recommended)</li>
+					<li>Storage -> 20GB (60-120GB Recommended)</li>	
 				</ul>
-
-				<a href="#" class="button">⏬ Download PacMan Linux ISO</a>
-				<a href="https://github.com/pacmanlinux/pacman-os" target="_blank" class="button">🐧 GitHub Repository</a>
-			</section>
-
-			<footer>
-				<p>PacMan Linux © 2025 - Made In The UK By One Developer</p>
-			</footer>
+			</div>
 		</div>
+	</section>
 
-		<script>
-			const tablinks = document.querySelectorAll('.tablink');
-			tablinks.forEach(link => {
-				link.addEventListener('click' e => {
-					e.preventDefault();
-					document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-					document.querySelectorAll('.tablink').forEach(s => s.classList.remove('active'));
-					document.getElementById(link.dataset.tab).classList.add('active');
-					link.classList.add('active');
-				});
-			});
-		</script>
+	<section class="button-group">
+		<a href="#" class="button">Download ISO</a>
+	</section>
 
-	</body>
+	<footer>
+		<p>PacMan Linux © 2025 - Built in the UK</p>
+		<p>More Than A Distro. Its a Statement.</p>
+	</footer>
+
+</body>
 </html>
+
