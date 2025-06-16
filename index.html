@@ -12,26 +12,7 @@
 			background-color: #000;
 			color: #fdf200;
 		}
-
-		#terminal-welcome {
-			background-color: #000;
-			color: #fdf200;
-			font-size: 1rem;
-			padding: 40px;
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			overflow: hidden;
-		}
-
-		#terminal-output {
-			white-space: pre-wrap;
-			text-align: left;
-			width: 100%;
-			max-width: 900px;
-		}
-
+		
 		nav {
 			background-color: #111;
 			border-bottom: 2px solid #fdf200;
@@ -117,13 +98,9 @@
 	</style>
 	</head>
 	<body>
-		
-		<div id="terminal-welcome">
-			<pre id="terminal-output"></pre>
-		</div>
 
 		<!-- main content -->
-		<div id="main-content" style="display: none;">
+		<div id="main-content">
 			<nav>
 				<a href="#" class="tablink active" data-tab="home">Home</a>
 				<a href="#" class="tablink" data-tab="features">Features</a>
@@ -131,247 +108,72 @@
 				<a href="#" class="tablink" data-tab="download">Download</a>
 			</nav>
 
-			<section id="home" class="section active">
-				<h1>PacMan Linux</h1>
-				<p>"The 'Live' Offensive Security OS Powered by Arch"</p>
-				<p>"PacMan Linux "eats" vulnerabilities before the ghosts (hackers) can catch you!"</p>
+				<section id="home" class="section active">
+				<h1><u>PacMan Linux</u></h1>
+				<p>The Customizable CyberSecurity Distro For Script Writers, Not Scirpt Kiddies!</p>
+				<br>
+				<p>Powered By Arch. Hardended For Offense. Built For Developers.</p>
 			</section>
 
 			<section id="features" class="section">
-				<h2>Secure. Speedy. Stable.</h2>
+				<h2>Secure. Modular. Fast</h2>
 				<div class="features">
 					<div class="feature-box">
-						<h3>Optimized for Pentesters, Bug Bounty Hunters & Hackers!</h3>
-						<br>
-						<p>Preloaded with Various Cyber-Security tools</p>
-						<br>
-						<p>-> Password Cracking. <-</p>
-						<p>-> Networking.<-</p>
-						<p>-> Forensics.<-</p>
-						<p>-> Ddos <-</p>
-						<p>Plus many other types of preloaded tools!</p>
+						<h3>CyberSecurity Modules</h3>
+						<p>Install Only The Tools You Need - Pentesting, Reverse Engineering, Forensics, Malware Analysis, And More!</p>
+					</div>
+					<div class="feature-box">
+						<h3>PacMan Script Engine</h3>
+						<p>Every Tool Is Launched via FZF-based Terminal Scripts or GTK Interfaces.<br>Built For Productivity And Control</p>
+					</div>
+					<div class="feature-box">
+						<h3>Clean Dev Experiance</h3>
+						<p>Using The Budgie Desktop, Minimal & Powerful</p>
 					</div>
 				</div>
 			</section>
 
-			<section id="screenshots" class="section screenshots">
+			<section id="screenshots" class="section">
 				<h2>Screenshots</h2>
-				<img src="screenshot1.png" alt="PacMan Linux Desktop">
+				<br>
+				<img src="desktop.png" alt="PacMan Linux Desktop">
+				<br>
+				<img src="stats.png" alt="PacMan Linux Idle Stats">
 			</section>
 
 			<section id="download" class="section">
 				<h2>Download PacMan Linux</h2>
-				<h3>Minimum System Requirements:</h3>
-				<p>CPU -> 64-bit Dual-Core</p>
-				<p>RAM -> 2GB (4GB Recommended)</p>
-				<p>Storage (USB) -> 8GB (16GB Recommended for Persistence)</p>
-				<p>Graphics -> Any (No GPU acceleration required, but helpful for tools like hashcat)</p>
-				<p>Boot -> UEFi/BIOS support</p> 
-				<br><br>
-				<h3>Recommended System Requirements:</h3>
-				<p>CPU -> 64-bit Quad-Core (intel i5/Ryzen 5 or better)</p>
-				<p>RAM -> 8GB+ (Required for virtuslization, multiple VMs, Memory intensive tools)</p>
-				<p>Storage (USB) -> 32GB+ (for Persistence, toolkits, and evidence storage)</p>
-				<p>Graphics -> GPU with OpenCL/CUDA support (For Password Cracking with hashcat)</p>
-				<p>Networking -> Wi-Fi card supporting monitor mode (e.g. Atheros AR9271, Intel AX200)</p>
-				<br><br>
-				<h3>Advanced System Requirements (For Heavy Security Workloads):</h3>
-				<p>CPU -> 6+ Cores (Required for running multiple VMs, Docker containers)</p>
-				<p>RAM -> 16GB+ (For memory analysis, malware sandboxing)</p>
-				<p>Storage (USB) -> 64GB+ (Needed for forensic images, large datasets)</p>
-				<p>Graphics (GPU) -> NVIDIA RTX/AMD RX (Helps to Speed up the Process of Cracking Hashes)</p>
-				<p>Networking -> Dual NICs (For Network Pentesting, Man in the Middle Attacks)</p>
 				<br>
-				<a href="#" class="button">⬇️ Download The PacMan Linux ISO</a>
-				<a href="#" class="button">🧑‍💻 PacMan Linux -> GitHub </a>
+				<h3>Minimum System Requirements</h3>
+				<ul style="list-style: none; padding-left: 0;">
+					<li>64-bit Dual-Core CPU</li>
+					<li>2GB RAM (4GB Recommended)</li>
+					<li>16GB Storage (32GB Recommended)</li>
+					<li>Basic Graphics (No GPU Acceleration Required)</li>
+					<li>UEFI/BIOS Boot Support</li>
+				</ul>
+
+				<a href="#" class="button">⏬ Download PacMan Linux ISO</a>
+				<a href="https://github.com/pacmanlinux/pacman-os" target="_blank" class="button">🐧 GitHub Repository</a>
 			</section>
 
 			<footer>
-				<p>PacMan Linux ©️ 2025</p>
-				<p>A One Man LINUX Project from the U.K.</p>
+				<p>PacMan Linux © 2025 - Made In The UK By One Developer</p>
 			</footer>
 		</div>
 
 		<script>
-			const lines = [
-				"PacMan Linux Bootloader v1.0",
-				"Loading the Linux Kernel...",
-				"Initializing BudgieLast commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
-Last commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
-Last commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
-Last commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
-Last commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
-Last commit date
-..
-README.md
-	
-script folder info
-	
-Jun 11, 2025
-secure_harden_base.sh
-	
-intial script upload
-	
-Jun 11, 2025
-README.md
-PacMan Linux - 'scripts/' Directory
-
-This folder contains essential shell scripts used to build, configure, and harden PacMan Linux. These scripts are modular and reusable across installation stages, ISO building, system hardening, and tool deployment.
-
-    'secure_harden_base.sh' --> Core System Hardening
-
-    Most scripts require 'sudo' or root privileges and are intended for a clean or freshly installed environment.
-
- Desktop Environment...",
-				"Mounting /dev/sda1 [OK]",
-				"Launching PacMan Linux...",
-				"Establishing Secure Session...",
-				"Welcome to PacMan Linux!",
-				"Press Any Key to Continue..."
-			];
-
-			const terminalOutput = document.getElementById('terminal-output');
-			const mainContent = document.getElementById('main-content');
-			let index = 0;
-			let charIndex = 0;
-
-			function typeLine() {
-				if (index >= lines.length) {
-					document.addEventListener('keydown', showMainContent);
-					return;
-				}
-
-				if (charIndex < lines[index].length) {
-					terminalOutput.textContent += lines[index][charIndex++];
-					setTimeout(typeLine, 40);
-				} else {
-					terminalOutput.textContent += '\n';
-					index++;
-					charIndex = 0;
-					setTimeout(typeLine, 400);
-				}
-			}
-
-			function showMainContent() {
-				document.removeEventListener('keydown', showMainContent);
-				document.getElementById('terminal-welcome').style.display = 'none';
-				mainContent.style.display = 'block';
-			}
-
-			window.onload = () => {
-				typeLine();
-			};
-
 			const tablinks = document.querySelectorAll('.tablink');
 			tablinks.forEach(link => {
-				link.addEventListener('click', e => {
+				link.addEventListener('click' e => {
 					e.preventDefault();
 					document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-					document.querySelectorAll('tablink').forEach(a => a.classList.remove('active'));
+					document.querySelectorAll('.tablink').forEach(s => s.classList.remove('active'));
 					document.getElementById(link.dataset.tab).classList.add('active');
 					link.classList.add('active');
 				});
 			});
 		</script>
+
 	</body>
-	</html>
+</html>
