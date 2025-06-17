@@ -16,14 +16,6 @@ Unlike other security distros such as Kali or BlackArch, PacMan Linux takes a **
 
 ---
 
-## Live Website 
-Visit the Site Here:
-[pacmanlinux.github.io](pacmanlinux.github.io)
-
-> ![url](https://github.com/user-attachments/assets/d67eeff4-eca9-4255-949f-3a8fe863fbad)
-
----
-
 ## Project Structure
 
 ```bash
